@@ -1,6 +1,8 @@
 """Модуль містить додаткові функції"""
+from functools import wraps
 
 def parse_input(user_input):
+    
     """
     Розбиває введений рядок на команду та аргументи.
 
@@ -25,6 +27,7 @@ def input_error(func):
     Повертає:
         callable: Обгорнуту функцію з обробкою помилок.
     """
+    @wraps(func)
     def inner(*args, **kwargs):
         try:
             return func(*args, **kwargs)

@@ -36,5 +36,3 @@ assert fib(15) == 610
 # Використання функцію fibonacci для обчислення чисел Фібоначчі
 print(fib(10))
 print(fib(15))
-
-print(fib.__doc__)
